@@ -30,6 +30,22 @@ body {
         "main"   auto
         "footer" 65px;
 
+h1 {
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 33px;
+}
+
+p {
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 17.5px;
+    line-height: 1.5rem;
+    margin-top: 0.7rem;
+}
+
 a.link {
     color: #dfa4df;
 }
