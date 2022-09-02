@@ -5,30 +5,38 @@ html {
 body {
     min-height: 100%;
     margin: auto;
-    background-color: #D9C1D7;
+    background-color: #836ac7;
 }
 
 .header {
     grid-area: header;
-    background-color: #89287F;
+    background-color: #50349f;
 }
 
 .main {
     grid-area: main;
 }
 
-.footer {
-    grid-area: footer;
-    background-color: #89287F;
+.footer-information {
+    grid-area: footer-information;
+    background-color: #50349f;
+}
+
+.footer-contact {
+    grid-area: footer-contact;
+    background-color: #50349f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page-layout {
     display: grid;
-    gap: 10px;
     grid-template: 
-        "header" 85px
-        "main"   auto
-        "footer" 65px;
+        "header             header"         85px
+        "main               main"           auto
+        "footer-information footer-contact" 65px;
+}
 
 .footer-contact a {
     grid-area: footer-information;
