@@ -29,4 +29,7 @@ body {
         "header" 85px
         "main"   auto
         "footer" 65px;
+
+a.link {
+    color: #dfa4df;
 }
