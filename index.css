@@ -17,6 +17,40 @@ body {
     grid-area: main;
 }
 
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding: 2.5rem;
+}
+
+.red-box-style-off {
+    padding: 6rem;
+    background-color: red;
+    opacity: 75%;
+}
+
+.blue-box-style-off {
+    padding: 6rem;
+    background-color: blue;
+    opacity: 75%;
+}
+
+.green-box-style-off {
+    padding: 6rem;
+    background-color: green;
+    opacity: 75%;
+}
+
+.yellow-box-style-off {
+    padding: 6rem;
+    background-color: yellow;
+    opacity: 75%;
+}
+
 .footer-information {
     grid-area: footer-information;
     background-color: #50349f;
