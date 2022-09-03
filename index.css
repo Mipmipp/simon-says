@@ -71,9 +71,9 @@ body {
 .page-layout {
     display: grid;
     grid-template: 
-        "header             header"         85px
-        "main               main"           auto
-        "footer-information footer-contact" 65px;
+        "header" 85px
+        "main"   auto
+        "footer" 80px;
 }
 
 .footer-contact a {
