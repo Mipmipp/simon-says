@@ -51,13 +51,17 @@ body {
     opacity: 75%;
 }
 
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
 .footer-information {
-    grid-area: footer-information;
     background-color: #50349f;
 }
 
 .footer-contact {
-    grid-area: footer-contact;
     background-color: #50349f;
     display: flex;
     justify-content: center;
