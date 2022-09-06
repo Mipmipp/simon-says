@@ -17,7 +17,22 @@ body {
     grid-area: main;
 }
 
-.board {
+#first-text-homepage {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 38px;
+    margin-top: 2rem;
+}
+
+#second-text-homepage {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 34px;
+    margin-top: 2rem;
+}
+
     display: grid;
     grid-template-areas: 
     "red-box   blue-box"
