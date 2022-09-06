@@ -18,37 +18,36 @@ body {
 }
 
 .board {
-    display: flex;
-    flex-wrap: wrap;
-    width: 40%;
-    align-content: center;
+    display: grid;
+    grid-template-areas: 
+    "red-box   blue-box"
+    "green-box yellow-box";
     justify-content: center;
-    margin: auto;
-    padding: 2.5rem;
+    padding: 2rem;
 }
 
-.red-box-style-off {
+#red-box {
     padding: 6rem;
     background-color: red;
-    opacity: 75%;
+    grid-area: "red-box";
 }
 
-.blue-box-style-off {
+#blue-box {
     padding: 6rem;
     background-color: blue;
-    opacity: 75%;
+    grid-area: "blue-box";
 }
 
-.green-box-style-off {
+#green-box {
     padding: 6rem;
     background-color: green;
-    opacity: 75%;
+    grid-area: "green-box";
 }
 
-.yellow-box-style-off {
+#yellow-box {
     padding: 6rem;
     background-color: yellow;
-    opacity: 75%;
+    grid-area: "yellow-box";
 }
 
 .footer {
