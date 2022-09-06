@@ -120,3 +120,7 @@ h1 {
 a.link {
     color: #dfa4df;
 }
+
+.hide {
+    display: none;
+}
