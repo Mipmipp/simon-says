@@ -141,6 +141,31 @@ button:hover span:nth-child(4) {
     grid-area: "yellow-box";
 }
 
+#first-text-lose {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 38px;
+    margin-top: 2rem;
+}
+
+#second-text-lose {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 34px;
+    margin-top: 2rem;
+}
+
+#best-score p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    margin-top: auto;
+    padding: 2rem;
+}
+
 .footer {
     grid-area: footer;
     display: grid;
