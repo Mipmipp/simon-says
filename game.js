@@ -2,6 +2,16 @@ let machinePattern = [];
 let userPattern = [];
 
 
+function machineTurn() {
+    let randomBox = getRandomBox();
+
+    machinePattern.push(randomBox);
+    highlightBox(randomBox)
+    setTimeout(function() {
+        returnColorBox(randomBox);
+    }, 3000);
+}
+
 function getRandomBox() {
     const totalBoxes = 4;
     let randomBoxNumber = Math.floor(Math.random() * totalBoxes) + 1;
