@@ -1,0 +1,3 @@
+let machinePattern = []; 
+let userPattern = [];
+
