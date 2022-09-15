@@ -40,6 +40,11 @@ body {
     padding: 2rem;
 }
 
+#start-game {
+    text-align: center;
+    margin-top: -1.5rem;
+}
+
 button{
     position: relative;
     margin: 10px;
