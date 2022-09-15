@@ -1,6 +1,10 @@
 let machinePattern = []; 
 let userPattern = [];
 
+function handleGame() {
+    machineTurn();
+    userTurn();
+}
 
 
 function comparePatterns() {
