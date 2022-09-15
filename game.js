@@ -2,6 +2,20 @@ let machinePattern = [];
 let userPattern = [];
 
 
+
+function comparePatterns() {
+    if(userPattern.length === machinePattern.length){
+        handleGame();
+    } else if(userPattern.length !== machinePattern.length) {
+        console.log('NO!!!!!!!')
+    }
+}
+
+function userTurn() {
+    getUserBox();
+    comparePatterns();
+}
+
 function getUserBox() {
     const redBox = document.querySelector('#red-box');
     const blueBox = document.querySelector('#blue-box');
