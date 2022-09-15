@@ -2,6 +2,45 @@ let machinePattern = [];
 let userPattern = [];
 
 
+function getUserBox() {
+    const redBox = document.querySelector('#red-box');
+    const blueBox = document.querySelector('#blue-box');
+    const greenBox = document.querySelector('#green-box');
+    const yellowBox = document.querySelector('#yellow-box');
+
+    redBox.onclick = function() {
+        userPattern.push('#red-box');
+        highlightBox('#red-box')
+        setTimeout(function() {
+            returnColorBox('#red-box');
+        }, 3000);
+    } 
+    
+    blueBox.onclick = function() {
+        userPattern.push('#blue-box');
+        highlightBox('#blue-box')
+        setTimeout(function() {
+            returnColorBox('#blue-box');
+        }, 3000);
+    }
+
+    greenBox.onclick = function() {
+        userPattern.push('#green-box');
+        highlightBox('#green-box')
+        setTimeout(function() {
+            returnColorBox('#green-box');
+        }, 3000);
+    }
+
+    yellowBox.onclick = function() {
+        userPattern.push('#yellow-box');
+        highlightBox('#yellow-box')
+        setTimeout(function() {
+            returnColorBox('#yellow-box');
+        }, 3000);
+    }
+}
+
 function machineTurn() {
     let randomBox = getRandomBox();
 
