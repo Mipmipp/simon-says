@@ -17,20 +17,34 @@ body {
     grid-area: main;
 }
 
+#homepage {
+    margin-top: 7rem;
+}
+
+#player-lose {
+    margin-top: 7rem;
+}
+
 #first-text-homepage {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 38px;
     margin-top: 2rem;
+    background: #50349f;
+    padding: 10px;
+    margin: 10px;
 }
 
 #second-text-homepage {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 34px;
     margin-top: 2rem;
+    background: #50349f;
+    padding: 10px;
+    margin: 10px;
 }
 
 #buttons-difficult {
@@ -149,17 +163,23 @@ button:hover span:nth-child(4) {
 #first-text-lose {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 38px;
     margin-top: 2rem;
+    background: #50349f;
+    padding: 10px;
+    margin: 10px;
 }
 
 #second-text-lose {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 34px;
     margin-top: 2rem;
+    background: #50349f;
+    padding: 10px;
+    margin: 10px;
 }
 
 #best-score p{
@@ -169,6 +189,9 @@ button:hover span:nth-child(4) {
     font-size: 30px;
     margin-top: auto;
     padding: 2rem;
+    background: #dfa4df;
+    padding: 10px;
+    margin: 10px;
 }
 
 .footer {
@@ -188,12 +211,31 @@ button:hover span:nth-child(4) {
     align-items: center;
 }
 
-#actual-score p{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color:black;
-    font-size: 30px;
-    margin-top: auto;
+#actual-score {
+    background-color: #836ac7;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#actual-round {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#actual-state {
+    color: #0e0525;
+    font-size: 25px;
+    font-weight: bolder;
+    background: #dfa4df;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+#actual-score p {
+    color: #0e0525;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 .page-layout {
@@ -243,13 +285,12 @@ a.link {
 }
 
 .highlight {
-    opacity: 35%;
+    opacity: 25%;
     transition: 1s;
 }
 
 .return-color {
     opacity: 100%;
-    transition: 1s;
 }
 
 .hide {
