@@ -29,46 +29,24 @@ function handleGame() {
 }
 
 function userTurn() {
-    getUserBox();
-    comparePatterns();
+    const $board = document.querySelector('#board');
+    $board.addEventListener('click', handleUserClick);
 }
 
-function getUserBox() {
-    const redBox = document.querySelector('#red-box');
-    const blueBox = document.querySelector('#blue-box');
-    const greenBox = document.querySelector('#green-box');
-    const yellowBox = document.querySelector('#yellow-box');
-
-    redBox.onclick = function() {
-        userPattern.push('#red-box');
-        highlightBox('#red-box')
-        setTimeout(function() {
-            returnColorBox('#red-box');
-        }, 3000);
-    } 
+function handleUserClick(e) {
+    const elementClicked = `#${e.target.id}`
+    highlightBox(elementClicked)
+    userPattern.push(elementClicked);
     
-    blueBox.onclick = function() {
-        userPattern.push('#blue-box');
-        highlightBox('#blue-box')
-        setTimeout(function() {
-            returnColorBox('#blue-box');
-        }, 3000);
+    const machineBoxSelected = machinePattern[userPattern.length - 1];
+    if (elementClicked !== machineBoxSelected) {
+        lose();
+        return;
     }
-
-    greenBox.onclick = function() {
-        userPattern.push('#green-box');
-        highlightBox('#green-box')
-        setTimeout(function() {
-            returnColorBox('#green-box');
-        }, 3000);
-    }
-
-    yellowBox.onclick = function() {
-        userPattern.push('#yellow-box');
-        highlightBox('#yellow-box')
-        setTimeout(function() {
-            returnColorBox('#yellow-box');
-        }, 3000);
+    
+    if(userPattern.length === machinePattern.length) {
+        blockUserInput();
+        setTimeout(handleGame, milliSecondsDifficult);
     }
 }
 
