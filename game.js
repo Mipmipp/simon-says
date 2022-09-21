@@ -79,4 +79,14 @@ function returnColorBox(randomBox) {
     document.querySelector(randomBox).className = 'return-color';
 }
 
+function blockUserInput() {
+    const $board = document.querySelector('#board');
+    $board.style.pointerEvents = 'none';
+}
+
+function unblockUserInput() {
+    const $board = document.querySelector('#board');
+    $board.style.pointerEvents = 'auto';
+}
+
 }
