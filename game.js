@@ -3,17 +3,29 @@ let userPattern = [];
 let milliSecondsDifficult = 0;
 
 function handleGame() {
-    machineTurn();
-    userTurn();
-}
+    updateState('Machine turn, wait!');
+    blockUserInput();
 
+    const newBox = getRandomBox();
+    machinePattern.push(newBox);
 
-function comparePatterns() {
-    if(userPattern.length === machinePattern.length){
-        handleGame();
-    } else if(userPattern.length !== machinePattern.length) {
-        console.log('NO!!!!!!!')
-    }
+    const DELAY_USER_TURN = (machinePattern.length + 1) * milliSecondsDifficult;
+
+    machinePattern.forEach(function(box, index) {
+        unblockUserInput();
+        const MS_DELAY = (index + 1) * milliSecondsDifficult;
+        setTimeout(function() {
+            highlightBox(box);
+        }, MS_DELAY);
+    });
+
+    setTimeout(function() {
+        updateState(`Is your turn! This is the round #${machinePattern.length}`);
+        unblockUserInput();
+        userTurn();
+    }, DELAY_USER_TURN);
+
+    userPattern = [];
 }
 
 function userTurn() {
