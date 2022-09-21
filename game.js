@@ -99,4 +99,7 @@ function updateState(state) {
     $state.textContent = state;
 } 
 
+function lose() {
+    hideElement('#game');
+    showElement('#player-lose')
 }
