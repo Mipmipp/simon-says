@@ -1,5 +1,6 @@
 let machinePattern = []; 
 let userPattern = [];
+let milliSecondsDifficult = 0;
 
 function handleGame() {
     machineTurn();
