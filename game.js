@@ -89,4 +89,14 @@ function unblockUserInput() {
     $board.style.pointerEvents = 'auto';
 }
 
+function updateRound(round) {
+    const numberRound = document.querySelector('#number-round');
+    numberRound.textContent = `${round}`;
+}
+
+function updateState(state) {
+    const $state = document.querySelector('#actual-state');
+    $state.textContent = state;
+} 
+
 }
