@@ -50,16 +50,6 @@ function handleUserClick(e) {
     }
 }
 
-function machineTurn() {
-    let randomBox = getRandomBox();
-
-    machinePattern.push(randomBox);
-    highlightBox(randomBox)
-    setTimeout(function() {
-        returnColorBox(randomBox);
-    }, 3000);
-}
-
 function getRandomBox() {
     const totalBoxes = 4;
     let randomBoxNumber = Math.floor(Math.random() * totalBoxes) + 1;
@@ -79,9 +69,14 @@ function getRandomBox() {
 }
 
 function highlightBox(randomBox) {
-    document.querySelector(`${randomBox}`).className = 'highlight';
+    document.querySelector(randomBox).className = 'highlight';
+    setTimeout(function() {
+        returnColorBox(randomBox);
+    }, milliSecondsDifficult)
 }
 
 function returnColorBox(randomBox) {
-    document.querySelector(`${randomBox}`).className = 'return-color';
+    document.querySelector(randomBox).className = 'return-color';
+}
+
 }
