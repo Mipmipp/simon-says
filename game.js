@@ -116,5 +116,5 @@ function updateState(state) {
 
 function lose() {
     hideElement('#game');
-    showElement('#player-lose')
+    showElement('#player-lose');
 }
