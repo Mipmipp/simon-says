@@ -1,12 +1,12 @@
 # Simon says!
 
 This is a game where you will try to repeat the machine's colors pattern as much rounds as you can.
-You can play it in 3 difficulties; easy, normal and hard
+You can play it in 3 difficulties; easy, normal and hard.
 
 
 ## Demo
 
-You can click [here](https://mipmipp.github.io/simon-says/) to try the game
+You can click [here](https://mipmipp.github.io/simon-says/) to try the game.
 
 ![example simon-says](https://media.giphy.com/media/5MvoEVkI60XO4IoSW3/giphy.gif)
 ## Contact me
