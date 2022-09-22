@@ -90,7 +90,7 @@ function unblockUserInput() {
 }
 
 function updateRound(round) {
-    const numberRound = document.querySelector('#number-round');
+    const $board = document.querySelector('#red-box');
     numberRound.textContent = `${round}`;
 }
 
