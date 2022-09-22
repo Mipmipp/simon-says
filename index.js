@@ -11,7 +11,7 @@ document.querySelector('#slow').onclick = function(event) {
 
 document.querySelector('#normal').onclick = function(event) {
     event.preventDefault();
-    milliSecondsDifficult = 1000;
+    milliSecondsDifficult = 1450;
     hideElement('#homepage');
     showElement('#game');
     showElement('#start-game');
@@ -20,17 +20,18 @@ document.querySelector('#normal').onclick = function(event) {
 
 document.querySelector('#fast').onclick = function(event) {
     event.preventDefault();
-    milliSecondsDifficult = 500;
+    milliSecondsDifficult = 850;
     hideElement('#homepage');
     showElement('#game');
     showElement('#start-game');
     hideElement('#actual-state');
 }
 
-document.querySelector('#start-game').onclick = function(event) {
+document.querySelector('#button-start-game').onclick = function(event) {
     event.preventDefault();
     hideElement('#start-game');
     showElement('#actual-state');
+    blockUserInput();
     machinePattern = [];
     handleGame();
 }
@@ -41,19 +42,16 @@ document.querySelector('#try-again').onclick = function(event) {
     hideElement('#actual-state');
     showElement('#start-game');
     showElement('#game');
-    document.querySelector('#start-game').onclick = function(event) {
-        event.preventDefault();
-        hideElement('#start-game');
-        showElement('#actual-state');
-        machinePattern = [];
-        handleGame();
-    }
+    blockUserInput();
+    machinePattern = [];
 }
 
 document.querySelector('#change-difficulty').onclick = function(event) {
     event.preventDefault();
     hideElement('#player-lose');
     showElement('#homepage');
+    blockUserInput();
+    machinePattern = [];
 }
 
 function showElement(element) {
