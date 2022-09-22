@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon says</title>
+    <link rel="icon" href="icon/simon-says-icon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body class="page-layout">
+    
+    <header class="header">
+        <h1>Simon says... !</h1>
+    </header>
+
+    <article class="main">
+        <div id="homepage" class="">
+            <p id="first-text-homepage">Follow the color pattern as much as you can to advance rounds.</p>
+            <p id="second-text-homepage">You can choose between play the game slowly, normal or really fast.</p>
+            <div id="buttons-difficult">
+                <button id="slow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    slow
+                </button>
+                <button id="normal">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    normal
+                </button>
+                <button id="fast">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    fast
+                </button>
+            </div>
+        </div>
+        <div id="game" class="hide">
+            <div id="board" class="">
+                <div id="red-box" class=""></div>
+                <div id="blue-box" class=""></div>
+                <div id="green-box" class=""></div>
+                <div id="yellow-box" class=""></div>
+            </div>
+            <div id="start-game" class="">
+                <button id="button-start-game">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Start game
+                </button>
+            </div>
+            <div id="actual-score">
+                <div id="actual-state" class="hide"></div>
+            </div>
+        </div>
+        <div id="player-lose" class="hide">
+            <p id="first-text-lose">You have lost :(</p>
+            <p id="second-text-lose">Do you want try again or change the difficulty?</p>
+            <div id="buttons-difficult">
+                <button id="try-again">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    try again
+                </button>
+                <button id="change-difficulty">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    change difficulty
+                </button>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="footer-information">
+            <p> Game made by Mipmipp. <br>Here is the link to the repository <a href="https://github.com/Mipmipp/simon-says" class="link">click</a></p>
+        </div>
+        <div class="footer-contact">
+            <a href="https://github.com/Mipmipp" class="github"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mipmipp/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=imipmipp@gmail.com" class="mail"><i class="fa fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+</body>
+</html>
