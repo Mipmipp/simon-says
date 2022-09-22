@@ -12,8 +12,9 @@ function handleGame() {
     const DELAY_USER_TURN = (machinePattern.length + 1) * milliSecondsDifficult;
 
     machinePattern.forEach(function(box, index) {
-        unblockUserInput();
+        blockUserInput();
         const MS_DELAY = (index + 1) * milliSecondsDifficult;
+
         setTimeout(function() {
             highlightBox(box);
         }, MS_DELAY);
@@ -69,24 +70,38 @@ function getRandomBox() {
 }
 
 function highlightBox(randomBox) {
+    blockUserInput();
     document.querySelector(randomBox).className = 'highlight';
     setTimeout(function() {
         returnColorBox(randomBox);
-    }, milliSecondsDifficult)
+    }, milliSecondsDifficult - 500)
 }
 
 function returnColorBox(randomBox) {
+    blockUserInput();
     document.querySelector(randomBox).className = 'return-color';
 }
 
 function blockUserInput() {
-    const $board = document.querySelector('#board');
-    $board.style.pointerEvents = 'none';
+    const $redBox = document.querySelector('#red-box');
+    const $blueBox = document.querySelector('#blue-box');
+    const $greenBox = document.querySelector('#green-box');
+    const $yellowBox = document.querySelector('#yellow-box');
+    $redBox.removeEventListener('click', handleUserClick);
+    $blueBox.removeEventListener('click', handleUserClick);
+    $greenBox.removeEventListener('click', handleUserClick);
+    $yellowBox.removeEventListener('click', handleUserClick);
 }
 
 function unblockUserInput() {
-    const $board = document.querySelector('#board');
-    $board.style.pointerEvents = 'auto';
+    const $redBox = document.querySelector('#red-box');
+    const $blueBox = document.querySelector('#blue-box');
+    const $greenBox = document.querySelector('#green-box');
+    const $yellowBox = document.querySelector('#yellow-box');
+    $redBox.addEventListener('click', handleUserClick);
+    $blueBox.addEventListener('click', handleUserClick);
+    $greenBox.addEventListener('click', handleUserClick);
+    $yellowBox.addEventListener('click', handleUserClick);
 }
 
 function updateRound(round) {
