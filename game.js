@@ -23,20 +23,20 @@ function handleGame() {
     setTimeout(function() {
         updateState(`Is your turn! This is the round #${machinePattern.length}`);
         unblockUserInput();
-        userTurn();
     }, DELAY_USER_TURN);
 
     userPattern = [];
 }
 
-function userTurn() {
-    const $board = document.querySelector('#board');
-    $board.addEventListener('click', handleUserClick);
-}
-
 function handleUserClick(e) {
     const elementClicked = `#${e.target.id}`
-    highlightBox(elementClicked)
+
+    highlightBox(elementClicked);
+    setTimeout(function() {
+        returnColorBox(elementClicked);
+        unblockUserInput();
+    }, milliSecondsDifficult)
+
     userPattern.push(elementClicked);
     
     const machineBoxSelected = machinePattern[userPattern.length - 1];
