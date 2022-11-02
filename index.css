@@ -24,6 +24,12 @@ body {
    #yellow-box {
       padding: 4.5rem !important;
    }
+
+   #board {
+      padding: 0rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+   }
 }
 
 .header {
